@@ -82,7 +82,6 @@
     </div>
   </header>
 
-  <!-- FIX 1: nav wrapped in .case-nav__wrapper for scroll fade JS/CSS to function -->
   <div class="case-nav__wrapper">
     <nav class="case-nav" id="caseNav" aria-labelledby="nav-label">
       <div class="case-nav__label" id="nav-label">Case Index</div>
@@ -103,9 +102,7 @@
     </nav>
   </div>
 
-  <!-- FIX 2: <aside> replaced with <div role="note"> — the preamble is a
-       required legal notice integral to the document, not tangential content.
-       Amendment note and whistleblower framing note added here. -->
+
   <div class="preamble-band" role="note" aria-label="Editorial and legal notice">
     <p class="preamble-band__text">All names of members, staff, and the specific facility location have been anonymised in accordance with UK GDPR and to comply with applicable libel law. Details of incidents have been described at a level of generality consistent with the documentary record; specific identifying characteristics of any individual member have been withheld to mitigate jigsaw identification. This case study does not assert that any individual member engaged in criminal conduct. This case study is based solely on documented written correspondence. No events, motivations, or outcomes are speculated upon.</p>
     <p class="preamble-band__text">A draft of this case study was provided to Nuffield Health in advance of publication for the purpose of a formal right of reply. The published version incorporates Nuffield Health's written response of 24th April 2026, reproduced in full, together with amendments made to reflect legal review and the complete documentary record. Nuffield Health's right of reply is included in full at Section 09 of this document.</p>
@@ -185,9 +182,6 @@
 
         <p>The following timeline is drawn directly from the documented email correspondence. It records the sequence of actions, responses, and communications across the complaint period, including the right of reply process and the subsequent escalation.</p>
 
-        <!-- FIX 3: <ol> replaced with <ul> — the list's sequence is conveyed
-             by the date content within each entry, not by list numbering.
-             aria-label retained for screen reader context. -->
         <ul class="timeline" aria-label="Complaint handling timeline">
 
           <li class="timeline__entry">
@@ -610,10 +604,6 @@
             </div>
           </li>
 
-          <!-- FIX 4: Four new timeline entries added to complete the
-               chronological record through the right of reply process,
-               Nuffield Health's final response, and the escalation actions. -->
-
           <li class="timeline__entry">
             <div class="timeline__date">
               <span class="timeline__day-name">Tue</span>
@@ -815,8 +805,6 @@
         </div>
       </section>
 
-      <!-- FIX 5: Duplicate <h2> removed — right-of-reply__title changed to <h3>
-           to maintain correct heading hierarchy within the section -->
       <section id="right-of-reply" aria-labelledby="header-right-of-reply">
         <header class="section-header">
           <span class="section-header__number">Section 09</span>
@@ -949,15 +937,12 @@
           </li>
 
           <li>
-            <strong>Public Audit Publication:</strong> This case study was published at <a href="https://www.thecozieraudit.co.uk">thecozieraudit.co.uk</a> in the public interest, as a transparent and fully documented account of the complaint-handling process and its outcomes, based solely on written correspondence and statutory disclosures. It is published responsibly: all individual names and the specific facility location have been anonymised, a genuine right of reply was offered to and responded to by Nuffield Health prior to publication, and no events, motivations, or outcomes have been speculated upon beyond the written record.
+            <strong>Public Audit Publication:</strong> This case study was published at thecozieraudit.co.uk in the public interest, as a transparent and fully documented account of the complaint-handling process and its outcomes, based solely on written correspondence and statutory disclosures. It is published responsibly: all individual names and the specific facility location have been anonymised, a genuine right of reply was offered to and responded to by Nuffield Health prior to publication, and no events, motivations, or outcomes have been speculated upon beyond the written record.
           </li>
 
         </ul>
       </section>
 
-      <!-- FIX 6: resolution-roadmap moved to before conclusion, given consistent
-           section-header structure, added to nav, and section number assigned.
-           .section-heading replaced with .section-header__title for consistency. -->
       <section id="resolution-roadmap">
         <header class="section-header">
           <span class="section-header__number">Section 12</span>
@@ -997,9 +982,6 @@
         </div>
       </section>
 
-      <!-- FIX 7: conclusion moved to final position, renumbered Section 13,
-           nav entry added, section-divider <hr> removed as conclusion is
-           now correctly the terminal section -->
       <section id="conclusion">
         <header class="section-header">
           <span class="section-header__number">Section 13</span>
