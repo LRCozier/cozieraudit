@@ -297,7 +297,7 @@ body {
 .preamble-band {
   background-color: var(--color-accent);
   padding: 1.25rem 2rem;
-  text-align: center;
+  text-align: justify;
 }
 
 .preamble-band__text {
