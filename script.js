@@ -327,3 +327,45 @@
 
   observer.observe(masthead);
 }());
+
+/* ─────────────────────────────────────────
+   11. COOKIE CONSENT BANNER
+   Manages explicit user consent and updates
+   the dataLayer for Google Tag Manager.
+───────────────────────────────────────── */
+document.addEventListener("DOMContentLoaded", function() {
+  const banner = document.getElementById('cookie-consent-banner');
+  const btnAccept = document.getElementById('btn-accept');
+  const btnDecline = document.getElementById('btn-decline');
+
+  const consentStatus = localStorage.getItem('ga_consent');
+
+  if (!consentStatus) {
+    banner.classList.remove('hidden');
+  } else if (consentStatus === 'granted') {
+    updateGtagConsent('granted');
+  }
+
+  btnAccept.addEventListener('click', function() {
+    localStorage.setItem('ga_consent', 'granted');
+    updateGtagConsent('granted');
+    banner.classList.add('hidden');
+  });
+
+  btnDecline.addEventListener('click', function() {
+    localStorage.setItem('ga_consent', 'denied');
+    banner.classList.add('hidden');
+  });
+
+  function updateGtagConsent(status) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    gtag('consent', 'update', {
+      'analytics_storage': status,
+      'ad_storage': status,
+      'ad_user_data': status,
+      'ad_personalization': status
+    });
+  }
+});
